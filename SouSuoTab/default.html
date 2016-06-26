@@ -1,0 +1,562 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>搜索管家</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="css/jquery-ui-1.10.3.custom.css" rel="stylesheet" media="screen" />
+    <link href="css/site.css" rel="stylesheet" media="screen" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+    <!--[if lte IE 6]>
+        <script type="text/javascript">
+            window.location.href = 'ie6.html';
+        </script>
+    <![endif]-->
+    <script src="js/jquery-ui-1.10.3.custom.js" type="text/javascript"></script>
+    <script src="js/page.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <span class="brand logo">
+                            <img src="img/logo-middle.png" alt="搜索管家" />
+                            搜索管家
+                        </span>
+                        <div class="nav-collapse collapse">
+                            <p class="navbar-text pull-right">
+                                统一搜索 方便快捷 无微不至
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid container-body">
+                <div class="well well-large middle-font main-body">
+                    <div id="tabs">
+                        <ul>
+                            <li><a href="#tabs-1">&nbsp; 搜 索 &nbsp; </a></li>
+                            <li><a href="#tabs-2">&nbsp; 视 频 &nbsp; </a></li>
+                            <li><a href="#tabs-3">&nbsp; 音 乐 &nbsp; </a></li>
+                            <li><a href="#tabs-4">&nbsp; 收 藏 &nbsp; </a></li>
+                        </ul>
+                        <div id="tabs-1">
+                            <div id="search-body">
+                                <div id="search-baidu" class="search-body-show">
+                                    <div id="baidu-logo">
+                                        <img src="img/baidu_logo.gif" />
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <p class="baidu-text" id="baidu-text">
+                                                <span class="link" id="baidu-news">新&nbsp;闻</span>
+                                                <span class="normal" id="baidu-web">网&nbsp;页</span>
+                                                <span class="link" id="baidu-tieba">贴&nbsp;吧</span>
+                                                <span class="link" id="baidu-zhidao">知&nbsp;道</span>
+                                                <span class="link" id="baidu-music">音&nbsp;乐</span>
+                                                <span class="link" id="baidu-pic">图&nbsp;片</span>
+                                                <span class="link" id="baidu-video">视&nbsp;频</span>
+                                                <span class="link" id="baidu-map">地&nbsp;图</span>
+                                                <span class="link" id="baidu-wenku">文&nbsp;库</span>
+                                            </p>
+                                        </div>
+                                        <div class="baidu-form-wrapper">
+                                            <form action="http://www.baidu.com/s" target="_blank" id="baidu-form">
+                                                <div class="baidu-input-wrapper">
+                                                    <input class="baidu-input" type="text" tabindex="0" autocomplete="off" maxlength="100" name="word" id="baidu-input" />
+                                                    <input name="ie" value="utf-8" type="hidden" />
+                                                </div>
+                                                <div class="baidu-button-wrapper">
+                                                    <input class="baidu-button" type="submit" value="百度一下" id="baiduSearch" />
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="search-google">
+                                    <div class="google-logo">
+                                        <img src="img/google_logo.png" />
+                                        <div class="google-logo-text">谷歌</div>
+                                    </div>
+                                    <form action="http://www.google.com.hk/search" target="_blank" id="google-form">
+                                        <div id="google-input-wrapper">
+                                            <input id="googleInput" class="google-input-text" name="q" maxlength="2048" title="Google 搜索" size="41" type="text" autocomplete="off" spellcheck="false" dir="ltr" x-webkit-speech=""/>
+                                        </div>
+                                        <div class="google-submit-wrapper">
+                                            <input value="Google 搜索" type="submit">
+                                            <input value="&nbsp;手气不错&nbsp;" name="btnI" type="submit">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="search-sogou">
+                                    <form action="http://www.sogou.com/web" target="_blank" id="sogou-form">
+                                        <div id="sogou-logo-wrapper">
+                                            <img src="img/sogou_logo.gif" />
+                                        </div>
+                                        <div id="sogou-text-line">
+                                            <span class="link" id="sogou-news">新闻</span>
+                                            <span class="normal" id="sogou-web">网页</span>
+                                            <span class="link" id="sogou-music">音乐</span>
+                                            <span class="link" id="sogou-pic">图片</span>
+                                            <span class="link" id="sogou-video">视频</span>
+                                            <span class="link" id="sogou-map">地图</span>
+                                            <span class="link" id="sogou-zhishi">知识</span>
+                                            <span class="link" id="sogou-shop">购物</span>
+                                            <a href="http://www.sogou.com/docs/more.htm" target="_blank">更多&gt;&gt;</a>
+                                        </div>
+                                        <div id="sogou-search-bottom">
+                                            <div id="sogou-input-wrapper">
+                                                <input name="query" id="sogou-input" class="sogou-input" size="47" maxlength="100" autocomplete="off">
+                                                <input name="ie" value="utf-8" type="hidden" />
+                                            </div>
+                                            <input type="submit" class="sogou-button" value="搜狗搜索" id="sogou-button" />
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="search-360">
+                                    <p id="so-logo-wrapper">
+                                        <img src="img/360_logo.png" />
+                                    </p>
+                                    <p id="so-text-line">
+                                        <span class="link" id="360-news">新闻</span>
+                                        <span class="normal" id="360-web">网页</span>
+                                        <span class="link" id="360-wenda">问答</span>
+                                        <span class="link" id="360-video">视频</span>
+                                        <span class="link" id="360-pic">图片</span>
+                                        <span class="link" id="360-music">音乐</span>
+                                        <span class="link" id="360-map">地图</span>
+                                        <span class="link" id="360-liangyi">良医</span>
+                                        <span class="link" id="360-leidian">雷电</span>
+                                    </p>
+                                    <div id="so-form-wrapper">
+                                        <form action="http://www.so.com/s" target="_blank" id="360-form">
+                                            <div>
+                                                <div id="so-input-wrapper">
+                                                    <input type="text" name="q" id="soInput" autocomplete="off" x-webkit-speech="" />
+                                                    <input name="ie" value="utf-8" type="hidden" />
+                                                </div>
+                                                <div id="so-button-wrapper">
+                                                    <input type="submit" id="so-search-button" value="搜索一下" />
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="search-jd">
+                                    <div id="jd-logo">
+                                        <img src="img/jd_logo.png" width="270" height="60" alt="京东">
+                                    </div>
+                                    <div id="jd-box">
+                                        <form action="http://search.jd.com/Search" target="_blank" method="get" id="jd-form">
+                                            <input type="text" class="text" name="keyword" autocomplete="off" id="jd-input" />
+                                            <input type="hidden" name="enc" value="utf-8" />
+                                            <input type="submit" value="搜索" class="button" id="jd-button" />
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="search-amazon">
+                                    <div id="amazon-logo-wrapper">
+                                        <div alt="www.amazon.cn" id="amazon-logo"></div>
+                                    </div>
+                                    <div id="amazon-box-wrapper">
+                                        <form action="http://www.amazon.cn/s" method="get" target="_blank" role="search" accept-charset="utf-8" id="amazon-form">
+                                            <div id="amazon-box">
+                                                <div id="amazon-input-box">
+                                                    <input type="hidden" name="__mk_zh_CN" value="亚马逊网站" />
+                                                    <input type="text" title="搜索" name="field-keywords" autocomplete="off" id="amazon-input" />
+                                                </div>
+                                                <div id="amazon-button-box">
+                                                    <input type="submit" value="搜索" title="搜索" id="amazon-button" />
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="search-taobao">
+                                    <div id="taobao-logo">
+                                        <img src="img/taobao.png" alt="淘宝网" />
+                                    </div>
+                                    <div id="taobao-container">
+                                        <ul id="taobao-tab-header">
+                                            <li id="taobao-baobei" class="current">宝贝</li>
+                                            <li id="taobao-dianpu" class="normal">店铺</li>
+                                            <li id="taobao-tianmao" class="normal">天猫</li>
+                                        </ul>
+                                        <div id="taobao-form-wrapper">
+                                            <form target="_blank" id="taobao-form" name="search" action="http://s.taobao.com/search">
+                                                <div id="taobao-input-wrapper">
+                                                    <input type="text" id="taobao-input" name="q" autofocus="true" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:translate">
+                                                    <input type="hidden" id="taobao-app" name="app" value="" />
+                                                </div>
+                                                <input type="submit" value="" id="taobao-submit" />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="search-xun">
+                                    <div id="xun-logo">
+                                        <img src="img/yixun.png" alt="易迅网" />
+                                    </div>
+                                    <div id="xun-container">
+                                        <form name="search" action="http://searchex.yixun.com/html" target="_blank" id="xun-form">
+                                            <input type="hidden" id="charset" name="charset" value="utf-8">
+                                            <input type="text" id="xun-input" name="key" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:search">
+                                            <input id="xun-submit" type="submit">
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="search-dazhong">
+                                    <div id="dazhong-logo-wrapper">
+                                        <span id="dazhong-logo"></span>
+                                    </div>
+                                    <div id="dazhong-container">
+                                        <ul id="dazhong-tab-header">
+                                            <li class="current">
+                                                <span id="dazhong-index"><strong>首页</strong></span>
+                                            </li>
+                                            <li class="normal">
+                                                <span id="dazhong-tuangou"><strong>团购</strong></span> 
+                                            </li>
+                                            <li class="normal">
+                                               <span id="dazhong-youhui"><strong>优惠券</strong></span>
+                                            </li>
+                                            <li class="normal">
+                                                <span id="dazhong-huiyuan"><strong>会员卡</strong></span>
+                                            </li>
+                                            <li class="normal">
+                                                <span id="dazhong-shequ"><strong>社区</strong></span>
+                                            </li>
+                                        </ul>
+                                        <div id="dazhong-form-wrapper">
+                                            <div id="dazhong-input-wrapper">
+                                                <input type="text" id="dazhong-input" name="keyword" autofocus="true" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:translate">
+                                            </div>
+                                            <a href="http://www.dianping.com" target="_blank" id="dazhong-link">搜索</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="search-tutuso">
+                                    <div id="tutuso-tab">
+                                        <a href="javascript:void(0)" id="tutuso-switch-woman"><img src="img/tutuso-switch-woman.png"></a>
+                                        <a href="javascript:void(0)" id="tutuso-switch-man"><img src="img/tutuso-switch-man.png"></a>
+                                    </div>
+                                    <div id="tutuso-woman">
+                                        <div id="tutuso-woman-logo">
+                                            <img src="img/tutuso-woman.gif" alt="图图搜衣" />
+                                        </div>
+                                        <div id="tutuso-woman-form">
+                                            <form action="http://tutuso.cn/s" method="get" target="_blank" id="tutusoWoman-form">
+                                                <div>
+                                                    <input name="keyword" id="tutuso-woman-input" type="search" autocomplete="off" contenteditable="true" />
+                                                    <input name="stype" value="keyword" type="hidden" />
+                                                    <input type="submit" id="tutuso-woman-submit" value="搜 索" />
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div id="tutuso-man">
+                                        <div id="tutuso-man-logo">
+                                            <img src="img/tutuso-man.png" alt="图图搜衣" />
+                                        </div>
+                                        <div id="tutuso-man-form">
+                                            <form action="http://man.tutuso.cn/s" method="get" target="_blank" id="tutusoMan-form">
+                                                <div>
+                                                    <input name="keyword" id="tutuso-man-input" type="search" autocomplete="off" contenteditable="true" />
+                                                    <input name="stype" value="keyword" type="hidden" />
+                                                    <input type="submit" id="tutuso-man-submit" value="搜 索" />
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="search-etao">
+                                    <div id="etao-container">
+                                        <div id="etao-logo-wrapper">
+                                            <img src="img/etao-logo.png" alt="一淘网" id="etao-logo" />
+                                        </div>
+                                        <div id="etao-search-wrapper">
+                                            <p class="etao-tab" id="etao-tab">
+                                                <span class="normal" id="etao-whole">全网</span>
+                                                <span class="link" id="etao-b2c">B2C</span>
+                                                <span class="link" id="etao-haitao">海淘</span>
+                                                <span class="link" id="etao-jiudian">酒店</span>
+                                            </p>
+                                            <div id="etao-form-wrapper">
+                                                <form id="etao-form" target="_blank" action="http://s.etao.com/search" method="get" accept-charset="utf-8">
+                                                    <div id="etao-input-wrapper">
+                                                        <input id="etao-input" name="q" value="" maxlength="512" aria-haspopup="true" aria-combobox="list" x-webkit-grammar="builtin:translate" hidefocus="true" type="search" />
+                                                    </div>
+                                                    <div id="etao-submit-wrapper">
+                                                        <input type="submit" value="" id="etao-submit">
+                                                        <input name="page_tab" value="" type="hidden" id="etao-search-type" />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="search-qiche">
+                                    <div id="qiche-logo-wrapper">
+                                        <img src="img/qiche.png" alt="汽车之家" />
+                                    </div>
+                                    <div id="qiche-form-wrapper">
+                                        <form method="get" action="http://sou.autohome.com.cn/zonghe" target="_blank" accept-charset="gb2312" id="qiche-form">
+                                            <p class="qiche-tab" id="qiche-tab">
+                                                <span class="normal" id="qiche-web">综合</span>
+                                                <span class="link" id="qiche-luntan">论坛</span>
+                                                <span class="link" id="qiche-wenzhang">文章</span>
+                                                <span class="link" id="qiche-video">视频</span>
+                                                <span class="link" id="qiche-hangqing">行情</span>
+                                            </p>
+                                            <div id="qiche-input-wrapper">
+                                                <input type="text" name="q" id="qiche-input" autocomplete="off" />
+                                            </div>
+                                            <input type="submit" id="qiche-submit" value="搜 索" />
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="search-dou">
+                                    <div id="dou-logo-wrapper">
+                                        <img src="img/dou-logo.png" alt="豆瓣" />
+                                    </div>
+                                    <div id="dou-form-wrapper">
+                                        <p class="dou-tab" id="dou-tab">
+                                            <span class="normal" id="dou-web">全网</span>
+                                            <span class="link" id="dou-dushu">读书</span>
+                                            <span class="link" id="dou-music">音乐</span>
+                                            <span class="link" id="dou-group">小组</span>
+                                            <span class="link" id="dou-local">同城</span>
+                                        </p>
+                                        <form method="get" action="http://www.douban.com/search" target="_blank" id="dou-form">
+                                            <div id="dou-input-wrapper">
+                                                <input type="text" name="q" id="dou-input" autocomplete="off" />
+                                                <input type="hidden" name="cat" value="" id="dou-cat" />
+                                                <div id="dou-submit-wrapper">
+                                                    <input type="submit" id="dou-submit" value="搜 索" />
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="search-58">
+                                    <div id="tc-logo-wrapper">
+                                        <img src="img/58-logo.gif" alt="中文最大生活信息门户" title="58同城，让生活更简单">
+                                    </div>
+                                    <div id="tc-form-wrapper">
+                                        <form action="http://bj.58.com/sou/" target="_blank" method="get" id="tc-form">
+                                            <div id="tc-input-wrapper">
+                                                <input type="text" class="text" name="key" autocomplete="off" id="tc-input" />
+                                            </div>
+                                            <div id="tc-submit-wrapper">
+                                                <input type="submit" value="同城搜索" class="button" id="tc-submit" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-logo">
+                                <ul id="sortable">
+                                    <li class="ui-state-default" id="icon-baidu">
+                                        <span>
+                                            <img src="img/icon_baidu.png" />
+                                            百度搜索
+                                        </span>
+                                    </li>
+                                    <li class="ui-state-default" id="icon-google">
+                                        <span>
+                                            <img src="img/icon_google.png" />
+                                            谷歌搜索
+                                        </span>
+                                    </li>
+                                    <li class="ui-state-default" id="icon-sogou">
+                                        <span>
+                                            <img src="img/icon_sogou.png" />
+                                            搜狗索搜
+                                        </span>
+                                    </li>
+                                    <li class="ui-state-default" id="icon-360">
+                                        <span>
+                                            <img src="img/icon_360.png" />
+                                            360搜索
+                                        </span>
+                                    </li>
+                                    <li class="ui-state-default" id="icon-jd">
+                                        <span>
+                                            <img src="img/icon_jd.png" />
+                                            京东商城
+                                        </span>
+                                    </li>
+                                    <li class="ui-state-default" id="icon-amazon">
+                                        <span>
+                                            <img src="img/icon_amazon.png" />
+                                            亚马逊
+                                        </span>
+                                    </li>
+                                    <li class="ui-state-default" id="icon-taobao">
+                                        <span>
+                                            <img src="img/icon_taobao.png" />
+                                            淘宝商城
+                                        </span>
+                                    </li>
+                                    <li class="ui-state-default" id="icon-xun">
+                                        <span>
+                                            <img src="img/icon_xun.png" />
+                                            易迅商城
+                                        </span>
+                                    </li>
+                                    <li class="ui-state-default" id="icon-dazhong">
+                                        <span>
+                                            <img src="img/icon_dazhong.png" />
+                                            大众点评
+                                        </span>
+                                    </li>
+                                    <li class="ui-state-default" id="icon-tutuso">
+                                        <span>
+                                            <img src="img/icon_tutuso.png" />
+                                            图图搜
+                                        </span>
+                                    </li>
+                                    <li class="ui-state-default" id="icon-etao">
+                                        <span>
+                                            <img src="img/icon_etao.png" />
+                                            一淘网
+                                        </span>
+                                    </li>
+                                    <li class="ui-state-default" id="icon-qiche">
+                                        <span>
+                                            <img src="img/icon_qiche.png" />
+                                            汽车之家
+                                        </span>
+                                    </li>
+                                    <li class="ui-state-default" id="icon-dou">
+                                        <span>
+                                            <img src="img/icon_dou.png" />
+                                            豆瓣网
+                                        </span>
+                                    </li>
+                                    <li class="ui-state-default" id="icon-58">
+                                        <span>
+                                            <img src="img/icon_58.png" />
+                                            58同城
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="tabs-2">
+                            <div class="tab-body-container">
+                                <p>
+                                    <img src="img/working.png" />
+                                </p>
+                                <p>
+                                    <strong class="text-success">搜索管家 视频搜索 负荆开发中...</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="tabs-3">
+                            <div class="tab-body-container">
+                                <p>
+                                    <img src="img/working.png" />
+                                </p>
+                                <p>
+                                    <strong class="text-error">搜索管家 音乐搜索 负荆开发中...</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="tabs-4">
+                            <div class="tab-body-container">
+                                <p>
+                                    <img src="img/working.png" />
+                                </p>
+                                <p>
+                                    <strong class="text-info">搜索管家 搜索收藏 负荆开发中...</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="well well-large middle-font body-link">
+                    <blockquote>
+                        <p>常用网站</p>
+                    </blockquote>
+                    <div class="row-fluid">
+                        <div class="span10">
+                            <div class="row-fluid">
+                                <div class="span1">视 频</div>
+                                <div class="span10">
+                                    <a href="http://www.youku.com/" target="_blank">优酷</a>
+                                    <a href="http://www.iqiyi.com/" target="_blank">爱奇艺</a>
+                                    <a href="http://www.tudou.com/" target="_blank">土豆网</a>
+                                    <a href="http://tv.sohu.com/" target="_blank">搜狐视频</a>
+                                    <a href="http://www.letv.com/" target="_blank">乐视网</a>
+                                    <a href="http://www.kankan.com/" target="_blank">迅雷看看</a>
+                                    <a href="http://v.qq.com/" target="_blank">腾讯视频</a>
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span1">游 戏</div>
+                                <div class="span10">
+                                    <a href="http://www.4399.com/" target="_blank">4399游戏</a>
+                                    <a href="http://www.7k7k.com/" target="_blank">7K7K游戏</a>
+                                    <a href="http://www.17173.com/" target="_blank">17173游戏</a>
+                                    <a href="http://youxi.baidu.com/" target="_blank">百度游戏</a>
+                                    <a href="http://www.265g.com/" target="_blank">265G游戏</a>
+                                    <a href="http://www.pcgames.com.cn/" target="_blank">太平洋游戏</a>
+                                    <a href="http://www.2144.cn/" target="_blank">2144游戏</a>
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span1">新 闻</div>
+                                <div class="span10">
+                                    <a href="http://news.sina.com.cn/" target="_blank">新浪新闻</a>
+                                    <a href="http://news.sohu.com/" target="_blank">搜狐新闻</a>
+                                    <a href="http://www.cntv.cn/" target="_blank">CNTV</a>
+                                    <a href="http://cn.reuters.com/" target="_blank">路透中文网</a>
+                                    <a href="http://www.huanqiu.com/" target="_blank">环球网</a>
+                                    <a href="http://news.baidu.com/" target="_blank">百度新闻</a>
+                                    <a href="http://news.ifeng.com/" target="_blank">凤凰新闻</a>
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span1">军 事</div>
+                                <div class="span10">
+                                    <a href="http://military.china.com/zh_cn/" target="_blank">中华军事</a>
+                                    <a href="http://news.ifeng.com/mil/" target="_blank">凤凰军事</a>
+                                    <a href="http://www.tiexue.net/" target="_blank">铁血军事</a>
+                                    <a href="http://www.chinaiiss.com/" target="_blank">战略军事网</a>
+                                    <a href="http://www.miercn.com/" target="_blank">米尔军情</a>
+                                    <a href="http://www.leiting001.com/" target="_blank">雷霆军事</a>
+                                    <a href="http://www.xinjunshi.com/" target="_blank">环球新军事</a>
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span1">小 说</div>
+                                <div class="span10">
+                                    <a href="http://www.qidian.com/" target="_blank">起点</a>
+                                    <a href="http://www.readnovel.com/" target="_blank">小说阅读网</a>
+                                    <a href="http://chuangshi.qq.com/" target="_blank">创世中文网</a>
+                                    <a href="http://www.qdmm.com/" target="_blank">起点女生网</a>
+                                    <a href="http://www.zongheng.com/" target="_blank">纵横中文网</a>
+                                    <a href="http://www.duoku.com/" target="_blank">多酷小说</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <img src="img/logo-big.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <p class="muted credit">@2013 <span class="text-info">搜索管家</span> 统一搜索 方便快捷 无微不至</p>
+        </div>
+    </div>
+</body>
+</html>
