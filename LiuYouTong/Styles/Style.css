@@ -1,0 +1,102 @@
+﻿html
+{
+    font-family: Microsoft YaHei,Segoe UI,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background-color: white;
+    -webkit-text-size-adjust: none;
+    color: #C6DAFC;
+    background-color: #ebebec;
+}
+img
+{
+    border: 0px;
+}
+.iPhoneBack
+{
+    background-image: url(../images/back.png);
+    width: 381px;
+    height: 751px;
+}
+.iPhoneBody
+{
+    position:relative;
+    background-image: url(../images/body.png);
+    width:320px;
+    height:480px;
+    left:31px;
+    top:114px;
+}
+.topMenu
+{
+    background-image: url(../images/topMenuBack.png);
+    height: 44px;
+    width: 320px;
+}
+.iPhoneApp
+{
+    position:relative;
+    width: 320px;
+    height: 411px;
+    top:20px;
+}
+.appLine
+{
+    clear:both;
+}
+.appLine div
+{
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.appLine img
+{
+    cursor: pointer;
+}
+.iPhoneMenu
+{
+    position:relative;
+    width: 320px;
+    height: 49px;
+    padding-left: 20px;
+    top:22px;
+}
+.iPhoneMenu div
+{
+    float: left;
+    margin-left: 5px;
+}
+.iPhoneMenu img, .homeMenu img, .itemLocation img
+{
+    cursor: pointer;
+}
+.iPhoneAppHide
+{
+    display:none;
+    top:-303px
+}
+.homeMenu
+{
+    padding-top:3px;
+    padding-left:10px;
+    float:left;
+}
+.itemTitle
+{
+    float:left;
+    padding-left:25px;
+    padding-top:3px;
+}
+.itemLocation
+{
+    float:left;
+    padding-left:45px;
+    padding-top:25px;
+}
