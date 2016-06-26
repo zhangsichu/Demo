@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Part One Homework</title>
+    <link type="text/css" href="style.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+    <div>
+        <div class="iphoneBorder">
+            <div class="iphonePanel">
+                <div class="iphoneDiv" id="dragPanel" style="width: 200px; height: 100px; margin: 20px;
+                    padding-top: 40px;">
+                    <span class="iphoneFont" id="infoText" style="opacity: 0.2; font-size: xx-large;">Drag
+                        Here</span>
+                </div>
+                <textarea id="urlArea" class="iphoneInput iphoneFont" style="width: 190px; height: 140px; margin: 0px 20px 0px 20px;" onfocus="this.select();">Base 64 Data Url</textarea>
+            </div>
+        </div>
+        <div class="taskList">
+            <h1>Task List:</h1>
+            <ol>
+                <li><strong>Drag/Drop Behavior *</strong></li>
+                <li><strong>Data URL *</strong></li>
+                <li><strong>File API *</strong></li>
+                <li>Blob:Binary Large OBject (Data-URL)</li>
+                <li>Drag-Out Behavior</li>
+                <li><strong>WebWorkers *</strong></li>
+                <li><strong>Notification *</strong> </li>
+                <li>Post Message</li>
+                <li>Geolocation</li>
+                <li><strong>Web Storage/Web SQL Database/IndexedDB *</strong></li>
+            </ol>
+        </div>
+    </div>
+    <div class="infoList">
+        <h1>Drag/Drop Behavior</h1>
+        <h4>Introduction: <a href="http://www.html5rocks.com/en/tutorials/dnd/basics/" target="_blank">http://www.html5rocks.com/en/tutorials/dnd/basics/</a></h4>
+		<h4>Mozilla Introduction: <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer</a></h4>
+        <h4>Drag and drop a folder: <a href="http://updates.html5rocks.com/2012/07/Drag-and-drop-a-folder-onto-Chrome-now-available" target="_blank">http://updates.html5rocks.com/2012/07/Drag-and-drop-a-folder-onto-Chrome-now-available</a></h4>
+        <h4>Drop Effect: <a href="http://html5.komplett.cc/code/chap_global/dropEffect_en.html" target="_blank">http://html5.komplett.cc/code/chap_global/dropEffect_en.html</a> </h4>
+        <h4>Playground: <a href="http://playground.html5rocks.com/#drag_and_drop" target="_blank">http://playground.html5rocks.com/#drag_and_drop</a></h4>
+        <h4>My Study Bible ExtJs Drag/Drop practice.</h4>
+        <hr />
+        <br />
+        <h1>Data URL</h1>
+        <h4>Data URL & Canvas: <a href="http://www.html5rocks.com/en/tutorials/canvas/integrating/#sketchy" target="_blank">http://www.html5rocks.com/en/tutorials/canvas/integrating/#sketchy</a></h4>
+        <hr />
+        <br />
+        <h1>File API</h1>
+        <h4>Introduction: <a href="http://www.html5rocks.com/en/tutorials/file/dndfiles/" target="_blank">http://www.html5rocks.com/en/tutorials/file/dndfiles/</a></h4>
+        <h4>File API Playground: <a href="http://playground.html5rocks.com/#reading_file_metadata" target="_blank">http://playground.html5rocks.com/#reading_file_metadata</a></h4>
+        <h4>Browser Support: <a href="http://www.html5rocks.com/en/features/file_access" target="_blank">http://www.html5rocks.com/en/features/file_access</a> </h4>
+        <h4><input type="file" id="fileAPI" /> <input type="button" id="fileAPIShow" value="Show"/></h4>
+        <hr />
+        <br />
+        <h1>Blob:Binary Large OBject (Data-URL)</h1>
+        <h4>Introduction: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Blob</a></h4>
+        <h4>Blob Builder: <a href="http://ie.microsoft.com/testdrive/HTML5/BlobBuilder/" target="_blank">http://ie.microsoft.com/testdrive/HTML5/BlobBuilder/</a> </h4>
+        <h4>Sample: <a href="blob.htm" target="_blank">Blob Sample</a></h4>
+        <hr />
+        <br />
+        <h1>Drag-Out Behavior</h1>
+        <h4>Drag-Out Download: <a href="http://www.html5rocks.com/en/tutorials/casestudies/box_dnd_download/" target="_blank">http://www.html5rocks.com/en/tutorials/casestudies/box_dnd_download/</a></h4>
+        <hr />
+        <br />
+        <h1>Web Worker</h1>
+        <h4>Web Worker Introduction: <a href="http://www.html5rocks.com/en/tutorials/workers/basics/" target="_blank">http://www.html5rocks.com/en/tutorials/workers/basics/</a></h4>
+        <h4>Web Worker Demo: <a href="http://people.mozilla.org/~prouget/demos/worker_and_simulatedannealing/index.xhtml" target="_blank">http://people.mozilla.org/~prouget/demos/worker_and_simulatedannealing/index.xhtml</a></h4>
+        <h4>Web Worker Practice: <a href="../../rocks/Slides/html5.html#web-workers" target="_blank">Slides/html5.html#web-workers</a></h4>
+        <h4>Web Worker Playground: <a href="http://playground.html5rocks.com/#inline_workers" target="_blank">http://playground.html5rocks.com/#inline_workers</a> </h4>
+        <hr />
+        <br />
+        <h1>Notification</h1>
+        <h4>Notification API: <a href="http://www.html5rocks.com/en/tutorials/notifications/quick/" target="_blank">http://www.html5rocks.com/en/tutorials/notifications/quick/</a></h4>
+        <h4>Notification Playground: <a href="http://playground.html5rocks.com/#simple_notifications" target="_blank">http://playground.html5rocks.com/#simple_notifications</a></h4>
+        <hr />
+        <br />
+        <h1>Post Message</h1>
+        <h4>Spec: <a href="http://www.w3.org/TR/webmessaging/" target="_blank">http://www.w3.org/TR/webmessaging/</a> </h4>
+        <h4>Playground: <a href="http://playground.html5rocks.com/#postmessage" target="_blank">http://playground.html5rocks.com/#postmessage</a></h4>
+        <hr />
+        <br />
+        <h1>Geolocation</h1>
+        <h4>Introduction: <a href="http://www.html5rocks.com/en/tutorials/geolocation/trip_meter/" target="_blank">http://www.html5rocks.com/en/tutorials/geolocation/trip_meter/</a> </h4>
+        <h4>Geolocation Dive into: <a href="http://localhost/blog/html5/rocks/dive/geolocation.html" target="_blank">http://localhost/blog/html5/rocks/dive/geolocation.html</a> </h4>
+        <h4>Geolocation Playground: <a href="http://playground.html5rocks.com/#get_current_position" target="_blank">http://playground.html5rocks.com/#get_current_position</a> </h4>
+        <hr />
+        <br />
+        <h1>Web Storage/Web SQL Database/IndexedDB</h1>
+        <h3>Web Storage: LocalStorage</h3>
+        <h4>Spec: <a href="http://dev.w3.org/html5/webstorage/#the-localstorage-attribute" target="_blank">http://dev.w3.org/html5/webstorage/#the-localstorage-attribute</a> </h4>
+        <h4>Playground: <a href="http://playground.html5rocks.com/#localstorage" target="_blank">http://playground.html5rocks.com/#localstorage</a></h4>
+        <hr />
+        <h3>Web Storage: SessionStorage</h3>
+        <h4>Spec: <a href="http://dev.w3.org/html5/webstorage/#the-sessionstorage-attribute" target="_blank">http://dev.w3.org/html5/webstorage/#the-sessionstorage-attribute</a></h4>
+        <h4>Playgroud: <a href="http://playground.html5rocks.com/#sessionstorage" target="_blank">http://playground.html5rocks.com/#sessionstorage</a></h4>
+        <hr />
+        <h3>Web SQL Database</h3>
+        <h4>Introduction: <a href="http://www.html5rocks.com/en/tutorials/webdatabase/todo/" target="_blank">http://www.html5rocks.com/en/tutorials/webdatabase/todo/</a></h4>
+        <h4>Playground: <a href="http://playground.html5rocks.com/#a_simple_todo_list_using_web_sql_database" target="_blank">http://playground.html5rocks.com/#a_simple_todo_list_using_web_sql_database</a> </h4>
+        <hr />
+        <h3>IndexedDB</h3>
+        <h4>Introduction: <a href="http://www.html5rocks.com/en/tutorials/indexeddb/todo/" target="_blank">http://www.html5rocks.com/en/tutorials/indexeddb/todo/</a> </h4>
+        <h4>Spec: <a href="http://www.w3.org/TR/IndexedDB/" target="_blank">http://www.w3.org/TR/IndexedDB/</a> </h4>
+        <h4>Playground: <a href="http://playground.html5rocks.com/#a_simple_todo_list_using_indexeddb" target="_blank">http://playground.html5rocks.com/#a_simple_todo_list_using_indexeddb</a> </h4>
+        <h4>Indexed DB: <a href="indexedDB.htm" target="_blank"> IndexDB TODO List</a></h4>
+
+        <h3>Compare <a href="http://www.html5rocks.com/en/tutorials/webdatabase/websql-indexeddb/" target="_blank">http://www.html5rocks.com/en/tutorials/webdatabase/websql-indexeddb/</a></h3>
+
+        <!--http://www.html5rocks.com/en/tutorials/indexeddb/todo/-->
+        <!--https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBOpenDBRequest-->
+        <!--https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer-->
+        <!--http://diveintohtml5.info/examples/history/pepper.html-->
+        <!--http://tkyk.github.io/jquery-history-plugin/#documentation-->
+        <!--http://diveintohtml5.info/examples/history/pepper.html-->
+        <br />
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="inherit.js"></script>
+</body>
+</html>

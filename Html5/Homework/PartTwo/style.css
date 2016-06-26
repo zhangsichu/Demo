@@ -1,0 +1,43 @@
+﻿body {
+    background: none repeat scroll 0 0 #EAEAEA;
+    color: #868686;
+    font: 12px "Lucida Grande", "Lucida Sans Unicode",Arial,Verdana,sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.demo {
+    float:left;
+}
+
+.clock {
+    margin: 10px;
+}
+
+.mineSweeper {
+    border: solid 1px #818BAA;
+    width:600px;
+    height:300px;
+    margin: 10px;
+}
+
+.taskList {
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.taskList li {
+    font-size: 14px;
+    text-align: left;
+    line-height: 25px;
+}
+
+.infoList {
+    clear: left;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 100px;
+}

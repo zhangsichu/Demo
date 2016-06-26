@@ -1,0 +1,397 @@
+﻿body {
+    background: none repeat scroll 0 0 #EAEAEA;
+    color: #868686;
+    font: 12px "Lucida Grande", "Lucida Sans Unicode",Arial,Verdana,sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.demo {
+    float:left;
+    margin-right:20px;
+}
+
+.taskList {
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.taskList li {
+    font-size: 14px;
+    text-align: left;
+    line-height: 25px;
+}
+
+.infoList {
+    clear: left;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 100px;
+}
+
+/**The Cat Face Start**/
+#face {
+    position: relative;
+    width: 310px;
+    height: 300px;
+    background: #07beea;
+    border: #333 2px solid;
+    margin: auto;
+    border-top-left-radius: 146px;
+    border-top-right-radius: 146px;
+    border-bottom-right-radius: 146px;
+    border-bottom-left-radius: 146px;
+}
+#eyes {
+    position: relative;
+    top: -5px;
+}
+.eye {
+    position: absolute;
+    border: 2px solid #000;
+    width: 72px;
+    height: 83px;
+    z-index: 20;
+    background: #fff;
+}
+.eyeLeft {
+    top: 45px;
+    left: 82px;
+}
+
+#leftEye {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+
+#leftBlackEye {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+
+.blackLeft {
+    top: 100px;
+    left: 130px;
+}
+
+.blackEye {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #333;
+    z-index: 21;
+}
+
+#rightEye {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+.eyeRight {
+    top: 45px;
+    left: 156px;
+}
+#rightBlackEye {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+.blackRight {
+    top: 100px;
+    left: 170px;
+}
+#base {
+    position: relative;
+    top: -5px;
+}
+#baseWhite {
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+    position: absolute;
+    border: #000 2px solid;
+    width: 264px;
+    height: 196px;
+    background: #FFF;
+    z-index: 1;
+    top: 85px;
+    left: 22px;
+}
+#nose {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #000;
+    background: #c93e00;
+    position: absolute;
+    top: 117px;
+    left: 139px;
+    z-index: 30;
+}
+#noseLight {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+#noseLine {
+    background: #333;
+    width: 3px;
+    height: 100px;
+    top: 140px;
+    left: 155px;
+    position: absolute;
+    z-index: 20;
+}
+
+#mouth {
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+    border-bottom-left-radius: 120px;
+    width: 240px;
+    height: 500px;
+    border-bottom: 3px solid #333;
+    position: absolute;
+    top: -263px;
+    left: 36px;
+    z-index: 10;
+}
+
+#mouthRewrite {
+    background: #fff;
+    width: 240px;
+    height: 90px;
+    position: relative;
+    top: 115px;
+    left: 35px;
+    z-index: 12;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 60px;
+}
+
+#firefoxMouth {
+}
+
+.whiskers {
+    background: #333;
+    height: 2px;
+    width: 60px;
+    position: absolute;
+    z-index: 20;
+}
+.whiRightTop {
+    top: 145px;
+    left: 210px;
+}
+.whiRight {
+    top: 165px;
+    left: 210px;
+}
+.whiRightBottom {
+    top: 185px;
+    left: 210px;
+}
+.whiLeftTop {
+    top: 145px;
+    left: 50px;
+}
+.whiLeft {
+    top: 165px;
+    left: 50px;
+}
+.whiLeftBottom {
+    top: 185px;
+    left: 50px;
+}
+
+@-webkit-keyframes pulse {
+ from {
+   opacity: 0.2;
+   -webkit-transform: skew(5deg);
+ }
+ to {
+   opacity: 1.2;
+   -webkit-transform: rotateZ(-5deg);
+ }
+}
+
+div#face {
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+}
+/**The Cat Face End**/
+
+/**Slide*/
+#slider {
+    width: 500px;
+    height: 300px;
+    margin: 50px 0px 60px 10px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+#slider:before, #slider:after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 20px;
+    -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    -webkit-transform: rotate(-4deg) skew(-10deg);
+    -moz-transform: rotate(-4deg) skew(-10deg);
+    -o-transform: rotate(-4deg) skew(-10deg);
+    -ms-transform: rotate(-4deg) skew(-10deg);
+    transform: rotate(-4deg) skew(-10deg);
+    left: 10px;
+    bottom: 13px;
+    z-index: -1;
+}
+
+#slider:after {
+    left: auto;
+    right: 10px;
+    -webkit-transform: rotate(4deg) skew(10deg);
+    -moz-transform: rotate(4deg) skew(10deg);
+    -o-transform: rotate(4deg) skew(10deg);
+    -ms-transform: rotate(4deg) skew(10deg);
+    transform: rotate(4deg) skew(10deg);
+}
+
+#slider ul {
+    width: 140px;
+    height: 40px;
+    padding: 0 0 0 0;
+    position: absolute;
+    z-index: 10;
+    list-style: none;
+    left: 50%;
+    margin-left: -70px;
+    bottom: -60px;
+}
+
+#slider ul li:first-child {
+    margin-left: 16px;
+}
+
+#slider ul li {
+    float: left;
+    margin-right: 12px;
+    margin-top: 14px;
+}
+
+#slider ul li:last-child {
+    margin-right: 0;
+}
+
+#slider ul li a {
+    width: 12px;
+    height: 12px;
+    display: block;
+    outline: none;
+    border: none;
+    position: relative;
+    z-index: 2;
+    background: #aaa;
+    box-shadow: inset 0 1px 1px 0px rgba(0, 0, 0, 0.6), 0px 1px 1px 0px white;
+    -moz-box-shadow: inset 0 1px 1px 0px rgba(0, 0, 0, 0.6), 0px 1px 1px 0px white;
+    -webkit-box-shadow: inset 0 1px 1px 0px rgba(0, 0, 0, 0.6), 0px 1px 1px 0px white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#slider ul li a:hover {
+    background: #888;
+}
+
+#slider img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    -webkit-transform: rotateZ(-10deg);
+    -moz-transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+    -o-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg);
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+#slider img:target {
+    opacity: 1;
+    -webkit-transform: rotateZ(0);
+    -moz-transform: rotateZ(0);
+    -ms-transform: rotateZ(0);
+    -o-transform: rotateZ(0);
+    transform: rotateZ(0);
+}
+
+#slider img#five {
+    opacity: 1;
+    -webkit-transform: rotateZ(0);
+    -moz-transform: rotateZ(0);
+    -ms-transform: rotateZ(0);
+    -o-transform: rotateZ(0);
+    transform: rotateZ(0);}
+
+#slider img:not(:target), #slider img:target ~ img#five  {
+  opacity: 0;
+    -webkit-transform: rotateZ(-10deg);
+    -moz-transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+    -o-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg);
+}
+
+#slider ul li a[href="#five"] {
+	background: #777;
+}
+
+#one:target ~ ul li a[href="#one"],
+#two:target ~ ul li a[href="#two"],
+#three:target ~ ul li a[href="#three"],
+#four:target ~ ul li a[href="#four"],
+#five:target ~ ul li a[href="#five"] {
+  background: #777;
+}
+
+#two:target ~ ul li a[href="#five"],
+#three:target ~ ul li a[href="#five"],
+#four:target ~ ul li a[href="#five"],
+#one:target ~ ul li a[href="#five"] {
+	background: #aaa;
+}
+/**Slide End*/
